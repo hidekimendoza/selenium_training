@@ -9,6 +9,251 @@
 <body>
     <div class="container">
         <h1> Selenium playground</h1>
+        <p>
+            This page contains various web elements designed for practicing Selenium automation.
+            Interact with different elements to understand how Selenium locators and actions work.
+        </p>
+        <section class="Text input Fields">
+            <h2>
+                Text Input Fields
+            </h2>
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" class="w-full">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" class="w-full">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" class="w-full">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Type your message here..."></textarea>
+            </div>
+        </section>
+        <section class="buttons">
+            <h2>Buttons</h2>
+            <div class="form-buttons">
+                <button id="clickMeBtn" class="btn">Click Me!</button>
+                <button id="submitBtn" class="btn">Submit Data</button>
+                <a href="#" id="linkButton" class="btn">Visit Link (Anchor as Button)</a>
+            </div>
+        </section>
+
+        <section class="checkboxes">
+            <h2>Checkboxes</h2>
+            <div class="checkbox-group">
+                <div>
+                    <input type="checkbox" id="option1" name="options" value="option1">
+                    <label for="option1">Option 1</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option2" name="options" value="option2" checked>
+                    <label for="option2">Option 2 (Checked by default)</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option3" name="options" value="option3">
+                    <label for="option3">Option 3</label>
+                </div>
+            </div>
+
+        </section>
+            <section class="radio-buttons">
+            <h2>Radio Buttons</h2>
+            <div class="radio-group">
+                <div>
+                    <input type="radio" id="genderMale" name="gender" value="male">
+                    <label for="genderMale">Male</label>
+                </div>
+                <div>
+                    <input type="radio" id="genderFemale" name="gender" value="female" checked>
+                    <label for="genderFemale">Female (Selected by default)</label>
+                </div>
+                <div>
+                    <input type="radio" id="genderOther" name="gender" value="other">
+                    <label for="genderOther">Other</label>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section: Dropdowns (Select Elements) -->
+        <section class="dropdowns">
+            <h2>Dropdowns</h2>
+            <div class="form-group">
+                <label for="singleSelect">Select a Country:</label>
+                <select id="singleSelect" name="country" class="w-full">
+                    <option value="">-- Please choose an option --</option>
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="australia">Australia</option>
+                    <option value="germany">Germany</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="multiSelect">Select Multiple Skills (Hold Ctrl/Cmd):</label>
+                <select id="multiSelect" name="skills" multiple size="5" class="w-full">
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                    <option value="csharp">C#</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="selenium">Selenium</option>
+                    <option value="api">API Testing</option>
+                    <option value="devops">DevOps</option>
+                </select>
+            </div>
+        </section>
+
+                <!-- Section: Table -->
+        <section class="mb-10 p-6 bg-gray-50 rounded-lg shadow-sm">
+            <h2 class="text-2xl mb-4">Data Table</h2>
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Availability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Laptop Pro</td>
+                        <td>$1200.00</td>
+                        <td>In Stock</td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Wireless Mouse</td>
+                        <td>$25.00</td>
+                        <td>Out of Stock</td>
+                    </tr>
+                    <tr>
+                        <td>103</td>
+                        <td>Mechanical Keyboard</td>
+                        <td>$90.00</td>
+                        <td>In Stock</td>
+                    </tr>
+                    <tr>
+                        <td>104</td>
+                        <td>USB-C Hub</td>
+                        <td>$40.00</td>
+                        <td>Limited Stock</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section: Image -->
+        <section class="mb-10 p-6 bg-gray-50 rounded-lg shadow-sm flex flex-col items-center">
+            <h2 class="text-2xl mb-4">Image Element</h2>
+            <img src="https://placehold.co/300x200/ADD8E6/000000?text=Placeholder+Image"
+                 alt="A placeholder image for demonstration"
+                 id="testImage"
+                 class="rounded-lg shadow-md max-w-full h-auto"
+                 onerror="this.onerror=null;this.src='https://placehold.co/300x200/CCCCCC/000000?text=Image+Not+Found';">
+            <p class="mt-2 text-gray-600">This is a placeholder image.</p>
+        </section>
+
+        <!-- Section: Dynamic Content and Message Box -->
+        <section class="mb-10 p-6 bg-gray-50 rounded-lg shadow-sm">
+            <h2 class="text-2xl mb-4">Dynamic Content & Message Box</h2>
+            <div id="dynamicContent" class="p-4 bg-white border border-gray-200 rounded-md mb-4 text-gray-700">
+                This content can be updated dynamically by scripts.
+            </div>
+            <button id="updateContentBtn" class="btn btn-primary mr-4">Update Content</button>
+            <button id="showMessageBoxBtn" class="btn btn-secondary">Show Message Box</button>
+        </section>
+
+        <!-- Custom Message Box Overlay -->
+        <div id="messageBoxOverlay" class="message-box-overlay">
+            <div class="message-box">
+                <h3 id="messageBoxTitle">Message Title</h3>
+                <p id="messageBoxContent">This is a custom message box. Selenium can interact with elements inside this box.</p>
+                <button id="closeMessageBoxBtn" class="btn btn-primary">Close</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // JavaScript for dynamic content and custom message box
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get elements
+            const dynamicContent = document.getElementById('dynamicContent');
+            const updateContentBtn = document.getElementById('updateContentBtn');
+            const showMessageBoxBtn = document.getElementById('showMessageBoxBtn');
+            const messageBoxOverlay = document.getElementById('messageBoxOverlay');
+            const messageBoxTitle = document.getElementById('messageBoxTitle');
+            const messageBoxContent = document.getElementById('messageBoxContent');
+            const closeMessageBoxBtn = document.getElementById('closeMessageBoxBtn');
+            const clickMeBtn = document.getElementById('clickMeBtn');
+
+            // Event listener for updating dynamic content
+            updateContentBtn.addEventListener('click', function() {
+                dynamicContent.textContent = 'Content updated at: ' + new Date().toLocaleString();
+                console.log('Dynamic content updated.');
+            });
+
+            // Event listener for showing the custom message box
+            showMessageBoxBtn.addEventListener('click', function() {
+                messageBoxTitle.textContent = 'Important Information';
+                messageBoxContent.textContent = 'You have successfully triggered a custom message box!';
+                messageBoxOverlay.classList.add('visible');
+                console.log('Message box shown.');
+            });
+
+            // Event listener for closing the custom message box
+            closeMessageBoxBtn.addEventListener('click', function() {
+                messageBoxOverlay.classList.remove('visible');
+                console.log('Message box closed.');
+            });
+
+            // Close message box if clicked outside (on the overlay itself)
+            messageBoxOverlay.addEventListener('click', function(event) {
+                if (event.target === messageBoxOverlay) {
+                    messageBoxOverlay.classList.remove('visible');
+                    console.log('Message box closed by clicking overlay.');
+                }
+            });
+
+            // Example of a simple click handler for "Click Me!" button
+            clickMeBtn.addEventListener('click', function() {
+                console.log('Click Me! button was clicked.');
+                dynamicContent.textContent = 'Click Me! button was activated.';
+            });
+
+            // Example of form submission handling (prevents actual submission for demonstration)
+            const registrationForm = document.getElementById('registrationForm');
+            if (registrationForm) {
+                registrationForm.addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent default form submission
+                    console.log('Registration form submitted!');
+                    // In a real scenario, you would send this data to a server
+                    dynamicContent.textContent = 'Registration form attempted submission. (Check console for details)';
+                    const formData = new FormData(registrationForm);
+                    for (let [key, value] of formData.entries()) {
+                        console.log(`${key}: ${value}`);
+                    }
+                    // You could also show a success message in the custom message box
+                    messageBoxTitle.textContent = 'Registration Status';
+                    messageBoxContent.textContent = 'Thank you for registering! (This is a mock submission)';
+                    messageBoxOverlay.classList.add('visible');
+                });
+            }
+        });
+    </script>
+
+
     </div>
 </body>
 </html>

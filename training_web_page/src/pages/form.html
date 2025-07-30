@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta title="Selenium Playground Form">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+        <!-- Section: Complete Registration Form -->
+        <section class="playground-form>
+            <h2 class="">Registration Form</h2>
+            <form id="registrationForm" action="#" method="POST">
+                <div class="form-group">
+                    <label for="regUsername">Username:</label>
+                    <input type="text" id="regUsername" name="username" placeholder="Choose a username" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email Address:</label>
+                    <input type="email" id="regEmail" name="email" placeholder="your.email@example.com" required>
+                </div>
+                                
+                <div class="form-group">
+                    <label for="regPhone">Phone number:</label>
+                    <input type="tel" id="regPhone" name="phone" placeholder="111-333-4444" required autocomplete="cc-number">
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password:</label>
+                    <input type="password" id="regPassword" name="password" placeholder="Min 8 characters" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter password" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" class="w-full">
+                </div>
+                <div class="form-group">
+                    <label class="block mb-2">Preferred Contact Method:</label>
+                    <div class="flex flex-wrap gap-4">
+                        <div>
+                            <input type="radio" id="contactEmail" name="contactMethod" value="email" checked>
+                            <label for="contactEmail">Email</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+                            <label for="contactPhone">Phone</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group flex items-center">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms" class="ml-2 mb-0">I agree to the <a href="#" class="text-blue-600 hover:underline">Terms and Conditions</a></label>
+                </div>
+                <button type="submit" class="btn btn-primary w-full mt-4">Register Account</button>
+            </form>
+        </section>
+
+             <script>
+        // JavaScript for dynamic content and custom message box
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // Example of form submission handling (prevents actual submission for demonstration)
+            const registrationForm = document.getElementById('registrationForm');
+            if (registrationForm) {
+                registrationForm.addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent default form submission
+                    console.log('Registration form submitted!');
+                    // In a real scenario, you would send this data to a server
+                    dynamicContent.textContent = 'Registration form attempted submission. (Check console for details)';
+                    const formData = new FormData(registrationForm);
+                    for (let [key, value] of formData.entries()) {
+                        console.log(`${key}: ${value}`);
+                    }
+                    // You could also show a success message in the custom message box
+                    messageBoxTitle.textContent = 'Registration Status';
+                    messageBoxContent.textContent = 'Thank you for registering! (This is a mock submission)';
+                    messageBoxOverlay.classList.add('visible');
+                });
+            }
+        });
+    </script>
+</body>
+

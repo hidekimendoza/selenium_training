@@ -56,9 +56,27 @@
             </form>
         </section>
 
+                <!-- Section: Dynamic Content and Message Box -->
+        <section class="dynamic-content">
+            <h2>Dynamic Content</h2>
+            <div id="dynamicContent">
+                This content can be updated dynamically by scripts.
+            </div>
+            <div id="messageBoxOverlay" class="message-box-overlay">
+            <div class="message-box">
+                <h3 id="messageBoxTitle">Message Title</h3>
+                <p id="messageBoxContent">This is a custom message box. Selenium can interact with elements inside this box.</p>
+                <button id="closeMessageBoxBtn" class="btn btn-primary">Close</button>
+            </div>
+        </div>
+
+        </section>
+
+
              <script>
         // JavaScript for dynamic content and custom message box
         document.addEventListener('DOMContentLoaded', function() {
+            const dynamicContent = document.getElementById('dynamicContent');
 
             // Example of form submission handling (prevents actual submission for demonstration)
             const registrationForm = document.getElementById('registrationForm');

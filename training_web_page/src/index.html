@@ -6,14 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
 </head>
+
 <body>
+
+
     <div class="container">
         <h1> Selenium playground</h1>
         <p>
             This page contains various web elements designed for practicing Selenium automation.
             Interact with different elements to understand how Selenium locators and actions work.
         </p>
+        <nav id="table-of-contents" class="table-of-contents">
+            <h2>Table of Contents</h2>
+            <ul id="toc-list">
+                <!-- Created dynamically using java script-->
+            </ul>
+        </nav>
         <section class="Text input Fields">
+
             <h2>
                 Text Input Fields
             </h2>
@@ -250,6 +260,48 @@
                     messageBoxOverlay.classList.add('visible');
                 });
             }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get the list element where the TOC will be rendered
+            const tocList = document.getElementById('toc-list');
+            
+            // Select all heading elements (h1, h2, h3) on the page
+            const headings = document.querySelectorAll('h1, h2, h3');
+
+            headings.forEach((heading, index) => {
+                // Ensure each heading has a unique ID, creating one if it doesn't exist
+                if (!heading.id) {
+                    const headingText = heading.textContent.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+                    heading.id = `${headingText}-${index}`;
+                }
+
+                // Create a list item and an anchor link for the TOC
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+
+                // Set the link's href to the heading's ID
+                link.href = `#${heading.id}`;
+                link.textContent = heading.textContent;
+                link.classList.add('toc-link');
+
+                // Add a class based on the heading level for styling (e.g., indentation)
+                switch(heading.tagName) {
+                    case 'H1':
+                        link.classList.add('h1-level');
+                        break;
+                    case 'H2':
+                        link.classList.add('h2-level');
+                        break;
+                    case 'H3':
+                        link.classList.add('h3-level');
+                        break;
+                }
+
+                listItem.appendChild(link);
+                tocList.appendChild(listItem);
+            });
         });
     </script>
 

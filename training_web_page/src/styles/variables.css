@@ -1,0 +1,17 @@
+:root {
+  --blue-primary: #007bff;
+  --accent-teal: #17a2b8;
+  --light-background: #f8f9fa;
+  --hover-background: #e6e6e6;
+  --hover-text-color: #1f2937;
+  --hover-border-color: #4f46e5;
+  --button-background-hover: lightgray;
+  --content-background: lightcyan;
+  --indent-unit: 30px;
+  --table-border-color: #ddd;
+  --table-header-bg-color: #3f72af;
+  --table-header-text-color: #ffffff;
+  --table-even-row-bg-color: #f2f2f2;
+  --table-even-row-bg-color: white;
+  --table-hover-row-bg-color: #ddd;
+}

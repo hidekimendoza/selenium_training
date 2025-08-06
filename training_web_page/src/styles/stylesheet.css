@@ -1,0 +1,107 @@
+@import url("variables.css");
+body {
+  background-color: var(--light-background);
+}
+
+header {
+  color: var(--blue-primary);
+}
+
+h1, h2, h3 {
+  color: var(--accent-teal);
+}
+
+.table-of-contents {
+  background-color: var(--content-background);
+}
+
+.table-of-contents li {
+  list-style: none;
+}
+
+.table-of-contents li[data-level='1'] { padding-left: 0; }
+.table-of-contents li[data-level='2'] { padding-left: var(--indent-unit); }
+.table-of-contents li[data-level='3'] { padding-left: calc(var(--indent-unit) * 2); }
+
+.table-of-contents li:hover {
+  background-color: var(--hover-background);
+  color: var(--hover-text-color);
+  border-left: 5px solid var(--hover-border-color);
+  transform: translateX(5px);
+}
+
+.form-group label {
+  display: block;
+  margin-top: 10px;
+}
+
+.form-buttons .btn {
+  display: inline-flex;
+  justify-content: space-evenly;
+  gap: 16px;
+}
+
+#linkButton:hover {
+  background-color: var(--button-background-hover);
+}
+
+#multiSelect,
+#singleSelect {
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+.dropdowns option:hover,
+.dropdowns option:focus {
+  background-color: darkblue;
+  color: white;
+}
+
+section,
+#messageBoxOverlay {
+  background-color: var(--content-background);
+}
+
+#table,
+#table-of-contents {
+  background-color: var(--content-background);
+}
+
+#messageBoxOverlay {
+}
+
+#table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  
+  /* Added a clear border and a subtle shadow for visual division */
+  border: 1px solid var(--table-border-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+#table thead tr {
+  background-color: var(--table-header-bg-color);
+  color: var(--table-header-text-color);
+  text-align: left;
+}
+
+#table th,
+#table td {
+  padding: 12px 15px;
+  border: 1px solid var(--table-border-color);
+}
+
+#table tbody tr:nth-child(even) {
+  background-color: var(--table-even-row-bg-color);
+}
+
+#table tbody tr:nth-child(odd) {
+  background-color: var(--table-odd-row-bg-color);
+}
+#table tbody tr:hover {
+  background-color: var(--table-hover-row-bg-color);
+  cursor: pointer;
+}

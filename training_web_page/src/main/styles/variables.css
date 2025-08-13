@@ -12,6 +12,6 @@
   --table-header-bg-color: #3f72af;
   --table-header-text-color: #ffffff;
   --table-even-row-bg-color: #f2f2f2;
-  --table-even-row-bg-color: white;
+  --table-odd-row-bg-color: white;
   --table-hover-row-bg-color: #ddd;
 }
